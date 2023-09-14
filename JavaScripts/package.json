@@ -1,0 +1,14 @@
+{
+  "name": "javascripts",
+  "version": "1.0.0",
+  "description": "JavaScript Leetcode solutions",
+  "main": "twoSum.js",
+  "scripts": {
+    "start": "nodemon twoSum.js"
+  },
+  "author": "Jeeban Giri",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
