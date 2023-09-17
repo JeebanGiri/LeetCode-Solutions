@@ -1,0 +1,11 @@
+{
+  "name": "javascripts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pallindrome.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jeeban",
+  "license": "ISC"
+}
