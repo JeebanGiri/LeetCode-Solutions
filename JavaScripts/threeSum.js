@@ -13,7 +13,7 @@ var threeSum = function (nums) {
         }
       }
     }
-    return number;
+    return number.reverse();
   }
 };
 
