@@ -8,4 +8,8 @@ const getRomanToInteger = (roman) => {
     D: 500,
     M: 1000,
   };
+  for (let x in romanNumber) {
+  }
+  
+  
 };
