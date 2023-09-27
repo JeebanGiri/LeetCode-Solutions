@@ -8,16 +8,25 @@ const getRomanToInteger = (roman) => {
     D: 500,
     M: 1000,
   };
+
+  let totalValue = 0;
+
   for (let x = 0; x < roman.length; x++) {
     const currentChar = roman[x];
     const currentValue = romanNumber[currentChar];
     const nextChar = roman[x + 1];
     const nextValue = romanNumber[nextChar];
-    console.log(currentChar);
-    console.log(currentValue);
-    console.log(nextChar);
+
+    // console.log(currentChar);
+    // console.log(currentValue);
+    // console.log(nextChar);
     // console.log(nextValue);
+
+    if (nextValue && currentValue < nextValue) {
+      totalValue -= currentValue;
+    } else {
+      totalValue += currentValue;
+    }
   }
 };
-
-getRomanToInteger("IV");
+console.log(getRomanToInteger("IV"));
