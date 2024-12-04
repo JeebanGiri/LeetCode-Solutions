@@ -5,7 +5,7 @@ const createCounter = function (init) {
       return ++count;
     },
     decrement: () => {
-      return count - 1;
+      return (count -= 1);
     },
     reset: () => {
       count = init;
