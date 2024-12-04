@@ -1,46 +1,27 @@
-// var expect = function (val) {
-//   return {
-//     toBe: (expected) => {
-//       return val === expected ? true : "Not Equal";
-//     },
-
-//     notToBe: (expected) => {
-//       return val !== expected ? true : "Equal";
-//     },
-//   };
-// };
-// try {
-//   expect(5).toBe(5); // Passes
-//   expect(5).notToBe(10); // Passes
-//   expect(5).toBe(10); // Throws "Not Equal"
-// } catch (error) {
-//   console.error(error.message); // Logs "Not Equal"
-// }
-
-function expect(val) {
+const expect = (value) => {
   return {
     toBe: (expected) => {
-      if (val === expected) {
-        return true; // Passes
+      if (value === expected) {
+        return true;
       } else {
-        throw new Error("Not Equal"); // Fails
+        throw new Error("Not Equal");
       }
     },
     notToBe: (expected) => {
-      if (val !== expected) {
-        return true; // Passes
+      if (value !== expected) {
+        return true;
       } else {
-        throw new Error("Equal"); // Fails
+        throw new Error("Equal");
       }
     },
   };
-}
+};
 
-// Example Usage:
 try {
-  expect(5).toBe(5); // Passes
-  expect(5).notToBe(10); // Passes
-  expect(5).toBe(10); // Throws "Not Equal"
-} catch (error) {
-  console.error(error.message); // Logs "Not Equal"
+  expect(2).toBe(2);
+  expect(5).toBe(4);
+  expect(4).notToBe(4);
+  expect(5).notToBe(5);
+} catch (err) {
+  console.log(err);
 }
