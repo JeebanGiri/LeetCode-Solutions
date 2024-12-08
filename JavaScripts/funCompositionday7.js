@@ -1,7 +1,8 @@
 var compose = function (functions) {
-  let fun = functions;
-  return function (x) {};
+  return function (x) {
+    return functions.reduceRight((accum, fn) => fn(accum), x);
+  };
 };
 
 const fn = compose([(x) => x + 1, (x) => 2 * x]);
-fn(4);
+console.log(fn(4));
